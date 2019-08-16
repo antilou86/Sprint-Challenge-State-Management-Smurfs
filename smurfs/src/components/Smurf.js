@@ -7,7 +7,7 @@ const Smurf = props => {
             <h3>{props.smurf.name}</h3>
             <p>age: {props.smurf.age}</p>
             <p>height: {props.smurf.height}</p>
-            {/* <button>eliminate smurf</button>     stretch*/}
+            {/* <button>eliminate smurf</button>  stretch*/}
         </div>
     )
 }
