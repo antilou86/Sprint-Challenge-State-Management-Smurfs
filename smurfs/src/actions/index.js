@@ -14,3 +14,16 @@ export const getSmurfs = () => dispatch => {
         dispatch({type:"FETCH_SMURF_ERROR", payload: `ERROR LOADING: ${err}`})
     )
 };
+
+export const postSmurfs = (item) => dispatch => {
+    axios
+    .post('http://localhost:3333/smurfs', item)
+    .then(res => {
+        console.log(res.data);
+        getSmurfs();
+    })
+    .catch(err => {
+        console.log('error posting new smurf: ', err);
+        dispatch({type:"POST_SMURF_ERROR", payload: `ERROR CREATING SMURF: ${err}`})
+    })
+}

@@ -3,6 +3,7 @@
 const intitialState = { 
     smurfs: [],
     error: '',
+    postError: '',
     isLoading: false
 };
 
@@ -20,6 +21,7 @@ switch (action.type) {
             ...state,
             smurfs: [...state.smurfs, action.payload],
             error: '',
+            postError: '',
             isLoading: false
         };
     case "FETCH_SMURF_ERROR":
@@ -27,6 +29,12 @@ switch (action.type) {
             ...state,
             error: action.payload
         };
+    case "POST_SMURF_ERROR":
+        return {
+            ...state,
+            error: '',
+            postError: action.payload
+        }
   
     default: return state;
 }
