@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { getSmurfs, postSmurfs } from './actions'
+import { getSmurfs, postSmurfs } from '../actions'
 import SmurfList from './SmurfList'
 import FormikSmurfPostForm from './SmurfPostForm'
 import "./App.css";
