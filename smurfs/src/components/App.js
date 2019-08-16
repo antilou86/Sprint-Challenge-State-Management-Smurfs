@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { getSmurfs, postSmurfs } from './actions'
 import SmurfList from './SmurfList'
+import FormikSmurfPostForm from './SmurfPostForm'
 import "./App.css";
 
 class App extends Component {
@@ -19,8 +20,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>SMURFS! 2.0 W/ Redux</h1>
-        {props.isLoading ? (<h2>LOADING ALL SMURFS...</h2>) : (<SmurfList fetchSmurf={this.fetchSmurf} createSmurf={this.createSmurf} />)}
+        <h1>SMURFS! 2.0 W/ Redux, you can: </h1>
+        <FormikSmurfPostForm createSmurf={this.createSmurf}/>
+        <SmurfList fetchSmurf={this.fetchSmurf}/>
       </div>
     );
   }

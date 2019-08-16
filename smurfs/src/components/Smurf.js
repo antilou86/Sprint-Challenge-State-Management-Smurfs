@@ -4,7 +4,7 @@ import '../App.css'
 const Smurf = props => {
     return (
         <div>
-            <h3>{props.smurf.name}</h3>
+            <h4>{props.smurf.name}</h4>
             <p>age: {props.smurf.age}</p>
             <p>height: {props.smurf.height}</p>
             {/* <button>eliminate smurf</button>  stretch*/}

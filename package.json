@@ -21,7 +21,9 @@
     "axios": "^0.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "redux-thunk": "^2.3.0"
+    "formik": "^1.5.8",
+    "redux-thunk": "^2.3.0",
+    "yup": "^0.27.0"
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
