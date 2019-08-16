@@ -2,8 +2,8 @@ import React from 'react';
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 
-const SmurfPostForm = ({ errors, touched }) => {
-
+const SmurfPostForm = props => {
+const {errors, touched} = props
     return (
         <div>
             <h3>Create A New Smurf!</h3>
@@ -22,7 +22,8 @@ const SmurfPostForm = ({ errors, touched }) => {
                     <Field type="number" name="age" placeholder="enter smurf age..."/>
                     {touched.age && errors.age && <p className="error">{errors.age}</p>}
                 </div>
-                <button>Submit New Smurf</button>
+
+                <button type="submit">Submit New Smurf</button>
             </Form>
 
         </div>
@@ -35,7 +36,7 @@ const FormikSmurfPostForm = withFormik({
     mapPropsToValues({ name, age, height }) {
         return {
             name: name || '',
-            age: age || null,
+            age: age || '',
             height: height || ''
         }
     },
@@ -49,9 +50,9 @@ const FormikSmurfPostForm = withFormik({
             .required('you really smurfed up, height is a required field')
     }),
 
-    handleSubmit(props, values) {
+    handleSubmit( values, props ) {
         console.log(values)
-        props.createSmurf(values)
+        props.props.createSmurf(values)
     }
 
 })(SmurfPostForm);

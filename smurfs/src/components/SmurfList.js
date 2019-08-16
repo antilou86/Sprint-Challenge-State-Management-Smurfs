@@ -19,7 +19,7 @@ const SmurfList = props => {
 
 
 const mapStateToProps = state => ({
-    smurfs: state.smurfs,
+    smurfs: state.smurfs[0],
     error: state.error,
     isLoading: state.isLoading
 });

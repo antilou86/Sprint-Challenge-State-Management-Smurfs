@@ -6,16 +6,13 @@ import FormikSmurfPostForm from './SmurfPostForm'
 import "./App.css";
 
 class App extends Component {
-  constructor() {
-    super();
-  }
+
   fetchSmurf = e => {
     e.preventDefault();
     this.props.getSmurfs()
   }
-  createSmurf = e => {
-    e.preventDefault();
-    this.props.postSmurfs()
+  createSmurf = (item) => {
+    this.props.postSmurfs(item)
   }
   render() {
     return (
