@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { getSmurfs, postSmurfs } from './actions'
+import SmurfList from './SmurfList'
 import "./App.css";
 
 class App extends Component {
